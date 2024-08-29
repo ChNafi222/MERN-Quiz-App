@@ -7,6 +7,8 @@ import Main from './Main'
 import Quiz from './Quiz'
 import Result from './Result'
 
+import { CheckUserExist } from '../helper/helper'
+
 const router  = createBrowserRouter([
   {
     path :'/',
@@ -14,11 +16,11 @@ const router  = createBrowserRouter([
   },
   {
     path: '/quiz',
-    element: <Quiz/>
+    element: <CheckUserExist><Quiz/></CheckUserExist>
   },
   {
     path: '/result',
-    element: <Result/>
+    element: <CheckUserExist><Result/></CheckUserExist> 
   },
 ])
 
